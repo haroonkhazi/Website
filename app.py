@@ -6,7 +6,7 @@ def main_page():
     return render_template('resume.html')
 
 @app.route("/home")
-def main_page():
+def home():
     return render_template('home.html')
 
 @app.route("/resume")
@@ -14,11 +14,11 @@ def resume():
     return render_template('resume.html')
 
 @app.route("/wip")
-def resume():
+def wip():
     return render_template('wip.html')
 
 @app.route("/pictures")
-def resume():
+def pictures():
     return render_template('pictures.html')
 
 
