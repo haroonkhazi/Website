@@ -13,10 +13,6 @@ def main_page():
 def resume():
     return render_template('resume.html')
 
-@app.route("/projects")
-def resume():
-    return render_template('projects.html')
-
 @app.route("/wip")
 def resume():
     return render_template('wip.html')
