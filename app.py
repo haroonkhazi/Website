@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, send_file
 app = Flask(__name__)
 
 @app.route("/")
@@ -23,7 +23,7 @@ def pictures():
 
 @app.route("/download", methods=['GET', 'POST'])
 def download_resume():
-    return send_from_directory('/home/ubuntu/Website/upload', 'haroonkhaziresume.pdf')
+    return send_file('/home/ubuntu/Website/upload', 'haroonkhaziresume.pdf')
 
 
 if __name__ == "__main__":
