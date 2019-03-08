@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 app = Flask(__name__)
 
 @app.route("/")
@@ -20,6 +20,10 @@ def wip():
 @app.route("/pictures")
 def pictures():
     return render_template('pictures.html')
+
+@app.route("/download", methods=['GET', 'POST'])
+def download_resume():
+    return send_from_directory('/home/ubuntu/Website/upload', 'haroonkhaziresume.pdf')
 
 
 if __name__ == "__main__":
