@@ -17,9 +17,9 @@ def resume():
 def wip():
     return render_template('wip.html')
 
-@app.route("/pictures")
-def pictures():
-    return render_template('pictures.html')
+@app.route("/projects")
+def projects():
+    return render_template('projects.html')
 
 @app.route("/download", methods=['GET', 'POST'])
 def download_resume():
