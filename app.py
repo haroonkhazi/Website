@@ -23,7 +23,7 @@ def projects():
 
 @app.route("/download", methods=['GET', 'POST'])
 def download_resume():
-    return send_file('/home/ubuntu/Website/upload', 'haroonkhaziresume.pdf')
+    return send_from_directory('/home/ubuntu/Website/upload', 'haroonkhaziresume.pdf')
 
 
 if __name__ == "__main__":
